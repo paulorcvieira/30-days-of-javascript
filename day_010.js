@@ -1,4 +1,4 @@
-// Desafio - Dia 10: Gerador de senha
+// Desafio - Dia 10: Gerador de senha randômica
 const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const generatesUppercaseLetters = () => String.fromCharCode(rand(65, 91));
 const generatesLowercaseLetters = () => String.fromCharCode(rand(97, 123));
