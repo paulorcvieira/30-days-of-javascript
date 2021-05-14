@@ -1,0 +1,5 @@
+curl 'http://localhost:4000/' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:4000' --data-binary '{"query":"query {\n  users {\n    id\n    name\n    email\n  }\n}# Write your query or mutation here\n"}' --compressed
+
+curl 'http://localhost:4000/' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:4000' --data-binary '{"query":"mutation {\n  createUser(name: \"Paulo\", email: \"paullocostta86@gmail.com\") {\n    id\n  }\n}"}' --compressed
+
+curl 'http://localhost:4000/' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:4000' --data-binary '{"query":"query {\n  user(id: \"609e6fec27da789922803a0d\") {\n    name\n    email\n  }\n}"}' --compressed
